@@ -14,7 +14,7 @@ Key changes:
 ## Usage
 
 ```js
-var makePassword = require('passwordmaker-lib');
+var makePassword = require('@webful/passwordmaker-lib');
 
 console.log(makePassword({
 	hashAlgorithm: 'sha256',
