@@ -1,6 +1,6 @@
 # passwordmaker-lib
 
-[![Build Status](https://travis-ci.org/webful-ltd/passwordmaker-lib.svg?branch=master)](https://travis-ci.org/webful-ltd/passwordmaker-lib)
+[![Build Status](https://travis-ci.com/webful-ltd/passwordmaker-lib.svg?branch=master)](https://travis-ci.com/webful-ltd/passwordmaker-lib)
 
 A library for [Password Maker](https://passwordmaker.org/).
 
@@ -14,7 +14,7 @@ Key changes:
 ## Usage
 
 ```js
-var makePassword = require('passwordmaker');
+var makePassword = require('passwordmaker-lib');
 
 console.log(makePassword({
 	hashAlgorithm: 'sha256',
