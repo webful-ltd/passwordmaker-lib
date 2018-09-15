@@ -1,4 +1,4 @@
-var crypto = require('crypto');
+var CryptoJS = require('crypto-js');
 var l33t = require('./lib/l33t');
 var hashutils = require('./lib/hashutils');
 
@@ -19,14 +19,14 @@ function generate(opts) {
 
 	// Apply the algorithm
 	var hash;
+	processedAlgorithm = opts.hashAlgorithm.toUpperCase();
 	if (usingHMAC) {
-		hash = crypto.createHmac(opts.hashAlgorithm.replace('hmac-', ''), opts.key);
-		hash.update(opts.data, 'utf8');
+		processedAlgorithm = processedAlgorithm.replace('HMAC-', 'Hmac');
+		hash = CryptoJS[processedAlgorithm](opts.data, opts.key);
 	} else {
-		hash = crypto.createHash(opts.hashAlgorithm);
-		hash.update(opts.key, 'utf8');
+		hash = CryptoJS[processedAlgorithm](opts.key);
 	}
-	var password = hashutils.rstr2any(hash.digest('binary'), opts.charset);
+	var password = hashutils.rstr2any(hash.toString(CryptoJS.enc.Latin1), opts.charset);
 
 	// Apply l33t after the algorithm?
 	if (opts.whereToUseL33t == 'both' || opts.whereToUseL33t == 'after-hashing') {

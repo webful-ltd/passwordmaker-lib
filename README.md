@@ -1,15 +1,22 @@
-# node-passwordmaker
+# passwordmaker-lib
 
-[![Build Status](https://travis-ci.org/emersion/node-passwordmaker.svg?branch=master)](https://travis-ci.org/emersion/node-passwordmaker)
+[![Build Status](https://travis-ci.org/webful-ltd/passwordmaker-lib.svg?branch=master)](https://travis-ci.org/webful-ltd/passwordmaker-lib)
 
-A Node.js library for [Password Maker](http://passwordmaker.org/).
+A library for [Password Maker](https://passwordmaker.org/).
+
+Forked from [emersion/node-passwordmarker](https://github.com/emersion/node-passwordmaker), with tweaks
+to allow client-side use without Browserify.
+
+Key changes:
+* Switched from Node's `Crypto` module to [crypto-js](https://www.npmjs.com/package/crypto-js).
+* Dropped MD4 support, as it's not included in that library.
 
 ## Usage
 
 ```js
-var makepwd = require('passwordmaker');
+var makePassword = require('passwordmaker');
 
-console.log(makepwd({
+console.log(makePassword({
 	hashAlgorithm: 'sha256',
 	masterPassword: 'test',
 	data: 'example.org',

@@ -1,6 +1,6 @@
-var makepwd = require('./index');
+var makePassword = require('./index');
 
-console.log(makepwd({
+console.log(makePassword({
 	hashAlgorithm: 'sha256',
 	masterPassword: 'test',
 	data: 'example.org',

@@ -10,20 +10,6 @@ describe('passwordmaker', function () {
 		data: 'example.org'
 	};
 
-	it('should return the correct password for hash md4', function () {
-		var opts = extend({}, baseOpts, {
-			hashAlgorithm: 'md4'
-		});
-		assert.equal(makePassword(opts), 'E#7.=d#Z');
-	});
-
-	it('should return the correct password for hash hmac-md4', function () {
-		var opts = extend({}, baseOpts, {
-			hashAlgorithm: 'hmac-md4'
-		});
-		assert.equal(makePassword(opts), 'IKi8;2JX');
-	});
-
 	it('should return the correct password for hash md5', function () {
 		var opts = extend({}, baseOpts, {
 			hashAlgorithm: 'md5'
