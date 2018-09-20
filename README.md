@@ -17,10 +17,10 @@ Key changes:
 var makePassword = require('@webful/passwordmaker-lib');
 
 console.log(makePassword({
-	hashAlgorithm: 'sha256',
-	masterPassword: 'test',
+	hashAlgorithm: 'hmac-sha256',
+	masterPassword: 'MySuperStrongMasterPassword',
 	data: 'example.org',
-	length: 8,
-	charset: ''
+	length: 15,
+	charset: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()_-+={}|[]\\:";\'<>?,./',
 }));
 ```
