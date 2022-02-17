@@ -19,7 +19,7 @@ function generate(opts) {
 
 	// Apply the algorithm
 	var hash;
-	processedAlgorithm = opts.hashAlgorithm.toUpperCase();
+	let processedAlgorithm = opts.hashAlgorithm.toUpperCase();
 	if (usingHMAC) {
 		processedAlgorithm = processedAlgorithm.replace('HMAC-', 'Hmac');
 		hash = CryptoJS[processedAlgorithm](opts.data, opts.key);
