@@ -1,6 +1,6 @@
 {
   "name": "@webful/passwordmaker-lib",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A client-side-friendly library for Password Maker",
   "main": "index.js",
   "scripts": {
