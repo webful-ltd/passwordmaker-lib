@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/webful-ltd/passwordmaker-lib#readme",
   "dependencies": {
-    "crypto-js": "^3.3.0"
+    "crypto-js": "^4.2.0"
   },
   "devDependencies": {
     "assert": "^2.0.0",
