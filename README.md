@@ -1,6 +1,6 @@
 # passwordmaker-lib
 
-[![Build Status](https://travis-ci.com/webful-ltd/passwordmaker-lib.svg?branch=main)](https://travis-ci.com/webful-ltd/passwordmaker-lib)
+[![Build Status](https://dl.circleci.com/status-badge/img/gh/webful-ltd/passwordmaker-lib/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/webful-ltd/passwordmaker-lib/tree/main)
 
 A library for [Password Maker](https://passwordmaker.org/).
 
